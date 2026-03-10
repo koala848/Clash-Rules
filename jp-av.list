@@ -1,0 +1,55 @@
+# --- [ 基础分流 - 综合门户 & 播放 ] ---
+DOMAIN-SUFFIX,dmm.com
+DOMAIN-SUFFIX,dmm.co.jp
+DOMAIN-SUFFIX,fanza.com
+DOMAIN-SUFFIX,mgstage.com
+DOMAIN-SUFFIX,u-next.jp
+DOMAIN-SUFFIX,p-m.jp
+DOMAIN-SUFFIX,sod.co.jp
+DOMAIN-SUFFIX,km-produce.com
+
+# --- [ 刮削必备 - 数据库 & 封面图 ] ---
+# 这些是 Emby/Jellyfin 插件最常访问的元数据站
+DOMAIN-SUFFIX,javlibrary.com
+DOMAIN-SUFFIX,javbus.com
+DOMAIN-SUFFIX,javdb.com
+DOMAIN-SUFFIX,jav321.com
+DOMAIN-SUFFIX,airav.cc
+DOMAIN-SUFFIX,arzon.jp
+DOMAIN-SUFFIX,getchu.com
+
+# --- [ 热门串流 & 预览站 ] ---
+# 很多刮削器会从这些站抓取剧照或简介
+DOMAIN-SUFFIX,missav.com
+DOMAIN-SUFFIX,avgle.com
+DOMAIN-SUFFIX,7mmtv.tv
+DOMAIN-SUFFIX,netflav.com
+DOMAIN-SUFFIX,bestjavporn.com
+DOMAIN-SUFFIX,javmost.com
+DOMAIN-SUFFIX,supjav.com
+
+# --- [ 知名片商官网 - 解决封面加载慢 ] ---
+DOMAIN-SUFFIX,moodyz.com
+DOMAIN-SUFFIX,ideapocket.com
+DOMAIN-SUFFIX,s1s1s1.com
+DOMAIN-SUFFIX,ippon.tv
+DOMAIN-SUFFIX,prestige-av.com
+DOMAIN-SUFFIX,premium-beauty.com
+DOMAIN-SUFFIX,alicejapan.co.jp
+DOMAIN-SUFFIX,waap.co.jp
+
+# --- [ 无码/个人站 - 补充 ] ---
+DOMAIN-SUFFIX,caribbeancom.com
+DOMAIN-SUFFIX,caribbeancompr.com
+DOMAIN-SUFFIX,heydouga.com
+DOMAIN-SUFFIX,10musume.com
+DOMAIN-SUFFIX,ponondo.com
+DOMAIN-SUFFIX,pacopacomama.com
+DOMAIN-SUFFIX,muramura.tv
+DOMAIN-SUFFIX,一本道.com
+
+# --- [ 关键关键字 - 补漏 ] ---
+# 只要域名里包含这些词，一律走日本节点
+DOMAIN-KEYWORD,tokyo-hot
+DOMAIN-KEYWORD,jav-library
+DOMAIN-KEYWORD,jav-bus
