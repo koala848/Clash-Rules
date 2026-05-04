@@ -10,9 +10,9 @@ DOMAIN-SUFFIX,km-produce.com
 
 # --- [ 刮削必备 - 数据库 & 封面图 ] ---
 # 这些是 Emby/Jellyfin 插件最常访问的元数据站
+# DOMAIN-SUFFIX,javdb.com
 DOMAIN-SUFFIX,javlibrary.com
 DOMAIN-SUFFIX,javbus.com
-DOMAIN-SUFFIX,javdb.com
 DOMAIN-SUFFIX,jav321.com
 DOMAIN-SUFFIX,airav.cc
 DOMAIN-SUFFIX,arzon.jp
