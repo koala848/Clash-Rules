@@ -1,0 +1,47 @@
+# --- [ Command Code (commandcode.ai) - AI 中转站 & API ] ---
+# 用途：Command Code 作为 AI 中转站使用时，API 调用 / 登录鉴权 / 控制台所需域名
+# 收录原则：仅收 Command Code 自身服务及 CLI 运行时必需的域名
+# 已剔除：第三方 BYOK 模型源（openrouter / novita / cerebras 等，按需自行开启）
+#         安装升级源（npmjs.org / registry.npmjs.org，交给代理规则处理）
+# 来源：command-code CLI v1.58.0 源码中的 API / Auth / 遥测端点常量
+
+# --- [ 核心服务 - 官网 & 控制台 ] ---
+# commandcode.ai 覆盖：www / pricing / billing / studio / docs
+# 同时承载 OAuth 登录落地页
+DOMAIN-SUFFIX,commandcode.ai
+
+# --- [ API 端点 - 生产 ] ---
+# CLI 默认 prod 环境 baseURL：https://api.commandcode.ai
+# 对上游模型的实际请求由服务端代发，客户端不直连第三方模型源
+DOMAIN-SUFFIX,api.commandcode.ai
+
+# --- [ 遥测上报 - OTLP ] ---
+# CLI 运行时上报 inference events（https://ingestion.claicode.com/v1/inference-events）
+# 若已关闭遥测，可将本行注释掉
+DOMAIN-SUFFIX,ingestion.claicode.com
+
+# --- [ 预发 / 测试环境 - 默认关闭 ] ---
+# 源码中的 staging 分支，正常生产不会走；需调试时取消注释
+# DOMAIN-SUFFIX,staging.commandcode.ai
+# DOMAIN-SUFFIX,staging-api.commandcode.ai
+
+# --- [ 模型清单拉取 - 可选 ] ---
+# 启动时抓取 https://models.dev/api.json（6s 超时，失败仅降级不阻断）
+# DOMAIN-SUFFIX,models.dev
+
+# --- [ 第三方 BYOK 通道 - 按需开启 ] ---
+# Command Code 支持自带 Key，接入下列哪家就取消注释哪家
+# DOMAIN-SUFFIX,openrouter.ai
+# DOMAIN-SUFFIX,api.novita.ai
+# DOMAIN-SUFFIX,api.cerebras.ai
+# DOMAIN-SUFFIX,api.groq.com
+# DOMAIN-SUFFIX,api.mistral.ai
+# DOMAIN-SUFFIX,api.together.xyz
+# DOMAIN-SUFFIX,api.x.ai
+# DOMAIN-SUFFIX,router.huggingface.co
+# DOMAIN-SUFFIX,ai-gateway.vercel.sh
+
+# --- [ 安装 & 升级源 - 需走代理，故不收录 ] ---
+# npm i -g command-code
+# DOMAIN-SUFFIX,npmjs.org
+# DOMAIN-SUFFIX,registry.npmjs.org
